@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="mine" method="post" onsubmit=" validateform()">
+        <label for="name">full name</label><br>
+
+        <input type="text" name="name" id=""><br>
+        <label for="religion">religion</label><br>
+        <label for="christian">christian</label><br>
+        <input type="radio" name="religion" id="christian"><br>
+        <label for="muslim">muslim</label><br>
+        <input type="radio" name="religion" id="muslim"><br>
+        <label for="hindi">hindi</label><br>
+        <input type="radio" name="religion" id="hindi"><br>
+        <label for="course">course</label><br>
+        <label for="programming">programming</label><br>
+        <input type="checkbox" name="course" id="programming"><br>
+        <label for="pastry">pastry</label><br>
+        <input type="checkbox" name="course" id="pastry"><br>
+        <input type="button" value="submit">
+    </form>
+    <script>
+        function validateform() {
+            var name = document.forms["mine"]["name"];
+            var religion = document.forms["mine"]["religion"];
+            var course = document.forms["mine"]["course"];
+        }
+        if (name !== "" || religion !== "" || course !== "") {
+            document.write("name is" + name);
+            document.write("your relidion is" + religion);
+            document.write("your course of choice is" + course);
+        }
+
+        if (name.value == "") {
+            document.write("name required");
+            return false;
+        }
+        if (religion.value == "") {
+            document.write("religion is required");
+            return false;
+        }
+        if (course.value == "") {
+            document.write("kindly select a course");
+            return false;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

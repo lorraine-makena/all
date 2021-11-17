@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function staff(id, name, salary) {
+            this.id = id;
+            this.name = name;
+
+            this.salary = salary;
+            //  this.changesalary = changesalary;
+            // function changesalary(othersalary) {
+            //  this.salary = othersalary;
+            //  function changeid(otherid) {
+            //  this.id = otherid;
+
+            this.changedetails = function changedetails(otherdetails) {
+                this.name = otherdetails;
+
+            }
+        }
+        e = new staff(296, "kelvin munga", 25);
+        document.write(e.id + " " + e.name + " " + e.salary);
+        // e.changesalary(50000);
+        // e.changeid(8797);
+        e.changedetails("lorraine")
+
+        document.write("<br>" + e.id + " " + e.name + " " + e.salary);
+
+    </script>
+</body>
+
+</html>

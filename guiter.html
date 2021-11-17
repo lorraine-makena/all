@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var inst = { owner: "lorraine", type: "guiter", brand: "cowboy", size: 38, color: "white" };
+        document.write(inst.owner + " " + inst.type + " " + inst.brand + " " + inst.size + " " + inst.color + " ");
+
+        document.write("</br>")
+
+    </script>
+    <script>
+        var inst = new Object();
+        inst.owner = "travis";
+        inst.type = "guiter";
+        inst.brand = "fender";
+        inst.size = 41;
+        inst.color = "brown";
+
+        document.write(inst.owner + " " + inst.type + " " + inst.brand + " " + inst.size + " " + inst.color + " ");
+        document.write("<br>");
+
+    </script>
+
+    <script>
+        function inst(owner, type, brand, size, color) {
+            this.owner = owner;
+            this.type = type;
+            this.brand = brand;
+            this.size = size;
+            this.color = color;
+        }
+        var m = new inst("sam heartz", "keyboard", "roland", "950", "black");
+
+        document.write(m.owner + " " + m.type + " " + m.brand + " " + m.size + " " + m.color + " ");
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

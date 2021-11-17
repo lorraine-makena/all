@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function staff(student, admno, subject, marks, standard) {
+            this.student = student;
+            this.admno = admno;
+            this.subject = subject;
+            this.marks = marks;
+            this.standard = standard;
+            // this.changestudent = changestudent;
+            // this.changeadmno = changeadmno;
+            // this.changesubject = changesubject;
+            // this.changemarks = changemarks;
+            // this.changestandard = changestandard
+
+            this.changestudent = (otherstudent) => {
+                this.student = otherstudent;
+            }
+            this.changeadmno = (otheradmno) => {
+                this.admno = otheradmno;
+            }
+            this.changesubject = (othersubject) => {
+                this.subject = othersubject;
+            }
+            this.changemarks = (othermarks) => {
+                this.marks = othermarks;
+            }
+            this.changestandard = (otherstandard) => {
+                this.standard = otherstandard;
+            }
+        }
+
+        var student = new staff("peter", 229, "math", 70, 8)
+
+        document.write("<h1>values</h1>");
+        document.write("STUDENT" + student.student + " " + "ADM" + student.admno + "SUBJECT" + " " + student.subject + " " + "MARKS" + " " + student.marks + " " + "STANDARD" + " " + student.standard)
+        document.write("<br>")
+        document.write("<br>")
+        student.changestudent("john");
+        student.changestandard(4);
+        student.changesubject(
+            "history"
+        )
+        document.write("<h1>updated values</h1>");
+        document.write("STUDENT" + student.student + " " + "ADM" + student.admno + "SUBJECT" + " " + student.subject + " " + "MARKS" + " " + student.marks + " " + "STANDARD" + " " + student.standard)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
